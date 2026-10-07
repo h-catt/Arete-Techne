@@ -1,0 +1,31 @@
+PATIENT DEMOGRAPHICS:
+Patient Name: Johnathan Miller
+DOB: 1968-04-12
+MRN: 8830192-A
+SSN: 000-42-9182
+Attending Physician: Dr. Sarah Chen, MD
+Facility: Mercy General Hospital ICU
+
+CLINICAL NOTE (2026-09-28 14:30 EST):
+Chief Complaint: Acute petechiae, mucosal bleeding, and sudden drop in platelet count.
+
+History of Present Illness:
+Patient Johnathan Miller is a 58-year-old male admitted on 2026-09-23 post-left total hip arthroplasty. On admission, baseline platelet count was 215,000 /uL. Prophylactic unfractionated heparin (5,000 units SQ Q12H) was initiated post-operatively on 2026-09-24.
+
+Today (2026-09-28), routine morning labs reveal a precipitous platelet drop to 38,000 /uL (a >50% decline from baseline over 4 days). Patient reports new onset petechial rash across lower extremities and mild epistaxis. No severe chest pain or shortness of breath.
+
+Current Medications:
+- Unfractionated Heparin 5,000 units SQ BID
+- Cefazolin 1g IV Q8H (completed Day 2)
+- Acetaminophen 650mg PO Q6H PRN
+
+Assessment & Plan:
+High clinical suspicion for Heparin-Induced Thrombocytopenia (HIT) vs. acute drug-induced immune thrombocytopenia. 
+1. Immediately discontinue all heparin flushes and prophylactic heparin.
+2. Calculate 4Ts score.
+3. Order anti-PF4/heparin antibody ELISA.
+4. Consider immediate initiation of non-heparin parenteral anticoagulant (e.g., Argatroban).
+
+Signed,
+Dr. Sarah Chen, MD (ID: 49201)
+Mercy General Hospital ICU
