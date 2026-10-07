@@ -28,4 +28,4 @@ High clinical suspicion for Heparin-Induced Thrombocytopenia (HIT) vs. acute dru
 
 Signed,
 Dr. Sarah Chen, MD (ID: 49201)
-Mercy General Hospital
+Mercy General Hospital ICU
