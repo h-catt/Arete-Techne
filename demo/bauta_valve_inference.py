@@ -14,20 +14,36 @@ llm = Llama(
     verbose=False,
 )
 
-with open("sample_ehr.txt", "r", encoding="utf-8") as file:
-        raw_note = file.read()
+try:
+    with open("sample_ehr.txt", "r", encoding="utf-8") as file:
+            raw_note = file.read()
 
-sanitized_note = anonymize(raw_note)
+    sanitized_note = anonymize(raw_note)
 
 
-output = llm(
-    "Analyze this sanitized payload : "+sanitized_note,
-    max_tokens=1500,
-    temperature=0.0,
-)
+    output = llm(
+        "Analyze this sanitized payload : "+sanitized_note,
+        max_tokens=1500,
+        temperature=0.0,
+    )
 
-print(output["choices"][0]["text"])
+    print(output["choices"][0]["text"])
 
-# Cleanup / VRAM release
-del llm
-gc.collect()
+finally:
+    # Best-effort clearing of the inference KV cache.
+    # This is not a guarantee of complete memory zeroization.
+    if llm is not None:
+        try:
+            llm._ctx.kv_cache_clear()
+        except (AttributeError, TypeError) as exc:
+            print(f"KV-cache clearing unavailable: {exc}")
+
+    # Drop Python references to sensitive content.
+    raw_note = None
+    sanitized_note = None
+    output = None
+
+    # Release the model and its associated native resources
+    # when the object is no longer referenced.
+    del llm
+    gc.collect()
