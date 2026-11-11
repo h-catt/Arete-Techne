@@ -78,25 +78,6 @@ output = llm(
 print(output["choices"][0]["text"])
 after_inference = report("AFTER INFERENCE")
 
-# finally:
-#     # Best-effort clearing of the inference KV cache.
-#     # This is not a guarantee of complete memory zeroization.
-#     if llm is not None:
-#         try:
-#             llm._ctx.kv_cache_clear()
-#         except (AttributeError, TypeError) as exc:
-#             print(f"KV-cache clearing unavailable: {exc}")
-
-#     # Drop Python references to sensitive content.
-#     raw_note = None
-#     sanitized_note = None
-#     output = None
-
-#     # Release the model and its associated native resources
-#     # when the object is no longer referenced.
-#     del llm
-#     gc.collect()
-
 
 # 1. Clear the KV cache while the context still exists.
 if llm is not None:
